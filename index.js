@@ -8,8 +8,8 @@ const server = http.createServer(async (req, res) => {
             // Fetch the random user data from the external API
             const user = await getRandomUserData();
 
-            //user.id = Math.floor(Math.random() * 10000000);
-            //console.log (user);
+            user.id = Math.floor(Math.random() * 10000000);
+            console.log (user);
 
             // Set the response headers to serve JSON
             res.writeHead(200, { 'Content-Type': 'application/json' });
@@ -29,8 +29,8 @@ const server = http.createServer(async (req, res) => {
 });
 
 // Start the server and listen on port 3000
-const PORT = 3000;
+const PORT = 3005;
 server.listen(PORT, () => {
-    // console.log(`Server running on http://localhost:${PORT}`);
+    //console.log(`Server running on http://localhost:${PORT}`);
     console.log(`Server running the example on http://localhost:${PORT}/user`);
 });

@@ -18,6 +18,7 @@ function getRandomUserData() {
                 try {
                     const parsedData = JSON.parse(data);
                     const userData = parsedData.results[0];
+                    //console.log(userData);
                     resolve({
                         name: `${userData.name.first} ${userData.name.last}`,
                         email: userData.email,
